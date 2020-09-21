@@ -13,6 +13,15 @@
 		BE04C92B25109DD70030CA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE04C92A25109DD70030CA49 /* Assets.xcassets */; };
 		BE04C92E25109DD70030CA49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE04C92D25109DD70030CA49 /* Preview Assets.xcassets */; };
 		BE04C93125109DD70030CA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE04C92F25109DD70030CA49 /* LaunchScreen.storyboard */; };
+		BE04C93B2510A2C30030CA49 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C93A2510A2C30030CA49 /* HomeView.swift */; };
+		BE04C9402511EC940030CA49 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C93F2511EC940030CA49 /* Dog.swift */; };
+		BE04C9422511F23E0030CA49 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C9412511F23E0030CA49 /* CardView.swift */; };
+		BE04C9442513A2650030CA49 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C9432513A2650030CA49 /* AddView.swift */; };
+		BE04C9462514E1050030CA49 /* CheckmarkToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C9452514E1050030CA49 /* CheckmarkToggleStyle.swift */; };
+		BE484CAC2515E2EC0002BE24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE484CAB2515E2EC0002BE24 /* GoogleService-Info.plist */; };
+		BEE0D08F251619E700713405 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D08E251619E700713405 /* AddViewModel.swift */; };
+		BEE0D093251747C500713405 /* CustomTapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D092251747C500713405 /* CustomTapBar.swift */; };
+		BEE0D0962518806800713405 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0952518806800713405 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		BE04C92D25109DD70030CA49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE04C93025109DD70030CA49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE04C93225109DD70030CA49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE04C93A2510A2C30030CA49 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BE04C93F2511EC940030CA49 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		BE04C9412511F23E0030CA49 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		BE04C9432513A2650030CA49 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		BE04C9452514E1050030CA49 /* CheckmarkToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkToggleStyle.swift; sourceTree = "<group>"; };
+		BE484CAB2515E2EC0002BE24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BEE0D08E251619E700713405 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		BEE0D092251747C500713405 /* CustomTapBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTapBar.swift; sourceTree = "<group>"; };
+		BEE0D0952518806800713405 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,11 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		772245F2452A5096A72F9D87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE04C91825109DD60030CA49 = {
 			isa = PBXGroup;
 			children = (
 				BE04C92325109DD60030CA49 /* DoggoHome */,
 				BE04C92225109DD60030CA49 /* Products */,
+				772245F2452A5096A72F9D87 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +82,16 @@
 		BE04C92325109DD60030CA49 /* DoggoHome */ = {
 			isa = PBXGroup;
 			children = (
+				BE04C93C2511EBEB0030CA49 /* Models */,
+				BE04C9392510A2B50030CA49 /* Views */,
+				BEE0D08D251619CE00713405 /* ViewModels */,
 				BE04C92425109DD60030CA49 /* AppDelegate.swift */,
 				BE04C92625109DD60030CA49 /* SceneDelegate.swift */,
 				BE04C92825109DD60030CA49 /* ContentView.swift */,
 				BE04C92A25109DD70030CA49 /* Assets.xcassets */,
 				BE04C92F25109DD70030CA49 /* LaunchScreen.storyboard */,
 				BE04C93225109DD70030CA49 /* Info.plist */,
+				BE484CAB2515E2EC0002BE24 /* GoogleService-Info.plist */,
 				BE04C92C25109DD70030CA49 /* Preview Content */,
 			);
 			path = DoggoHome;
@@ -73,6 +103,35 @@
 				BE04C92D25109DD70030CA49 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE04C9392510A2B50030CA49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE04C93A2510A2C30030CA49 /* HomeView.swift */,
+				BE04C9412511F23E0030CA49 /* CardView.swift */,
+				BE04C9432513A2650030CA49 /* AddView.swift */,
+				BE04C9452514E1050030CA49 /* CheckmarkToggleStyle.swift */,
+				BEE0D092251747C500713405 /* CustomTapBar.swift */,
+				BEE0D0952518806800713405 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE04C93C2511EBEB0030CA49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE04C93F2511EC940030CA49 /* Dog.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEE0D08D251619CE00713405 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0D08E251619E700713405 /* AddViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +161,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Julien Segers";
 				TargetAttributes = {
 					BE04C92025109DD60030CA49 = {
@@ -136,6 +195,7 @@
 				BE04C93125109DD70030CA49 /* LaunchScreen.storyboard in Resources */,
 				BE04C92E25109DD70030CA49 /* Preview Assets.xcassets in Resources */,
 				BE04C92B25109DD70030CA49 /* Assets.xcassets in Resources */,
+				BE484CAC2515E2EC0002BE24 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +206,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE04C9442513A2650030CA49 /* AddView.swift in Sources */,
+				BE04C9462514E1050030CA49 /* CheckmarkToggleStyle.swift in Sources */,
 				BE04C92525109DD60030CA49 /* AppDelegate.swift in Sources */,
+				BE04C93B2510A2C30030CA49 /* HomeView.swift in Sources */,
 				BE04C92725109DD60030CA49 /* SceneDelegate.swift in Sources */,
+				BE04C9402511EC940030CA49 /* Dog.swift in Sources */,
+				BEE0D08F251619E700713405 /* AddViewModel.swift in Sources */,
+				BE04C9422511F23E0030CA49 /* CardView.swift in Sources */,
+				BEE0D0962518806800713405 /* LoginView.swift in Sources */,
+				BEE0D093251747C500713405 /* CustomTapBar.swift in Sources */,
 				BE04C92925109DD60030CA49 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +260,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -216,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,6 +321,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -270,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>979487033958-gs3iut5s7ehpjagltj3pdvf4oh6drg62.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.979487033958-gs3iut5s7ehpjagltj3pdvf4oh6drg62</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAzupUbckq0vSshKEg_vZj-azTR6yAawZo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>979487033958</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.juliensegers.DoggoHome</string>
+	<key>PROJECT_ID</key>
+	<string>doggohome-d05b0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>doggohome-d05b0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:979487033958:ios:7d85e98cfc8d6b79f2fba7</string>
+	<key>DATABASE_URL</key>
+	<string>https://doggohome-d05b0.firebaseio.com</string>
+</dict>
+</plist>
