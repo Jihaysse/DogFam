@@ -7,34 +7,37 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct HomeView: View {
     
-    @ObservedObject var viewModel: AddViewModel = .sharedInstance
-    
-    @State var selectedTab = "Home"
+    @ObservedObject var addViewModel: AddViewModel = .sharedInstance
+    @ObservedObject var user: UserAuth = .sharedInstance
     
     var body: some View {
         ZStack {
+            
             ScrollView(.vertical, showsIndicators: false) {
-                
-    //            ForEach(viewModel.dogs) { dog in
-    //                CardView(dog: dog)
-    //                Text(dog.name)
-    //            }
-                
-                CardView(dog: Dog(name: "blabla", race: "", age: 2, gender: "", sterile: true, pictureURL: "", location: "", dogFriendly: true, catFriendly: true, childFriendly: true, needsGarden: true, isClean: true))
-                CardView(dog: Dog(name: "blabla", race: "", age: 2, gender: "", sterile: true, pictureURL: "", location: "", dogFriendly: true, catFriendly: true, childFriendly: true, needsGarden: true, isClean: true))
-                CardView(dog: Dog(name: "blabla", race: "", age: 2, gender: "", sterile: true, pictureURL: "", location: "", dogFriendly: true, catFriendly: true, childFriendly: true, needsGarden: true, isClean: true))
+                VStack { // VStack so the CardView's shadow isn't cut off
+                    ForEach(addViewModel.dogs) { dog in
+                        CardView(dog: dog)
+                    }
+                }.padding(.horizontal, 10) // padding so the CardView's shadow isn't cut off
+                .padding(.bottom, 70)
+
                 
             }
-                        VStack {
-                            Spacer()
-                            CustomTapBar(selectedTab: $selectedTab)
-                        }.edgesIgnoringSafeArea(.bottom)
+//            .padding(.bottom, 75)
+            VStack {
+                Spacer()
+                CustomTapBar()
+            }.edgesIgnoringSafeArea(.bottom)
             
             
             
+        }.onAppear() {
+            self.addViewModel.fetchDogData()
+            self.user.checkIfUserIsLoggedIn()
         }
         
     }

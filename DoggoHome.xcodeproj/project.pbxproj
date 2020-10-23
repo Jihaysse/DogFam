@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060801C3A748ACBA9E7CA80F /* Pods_DoggoHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485C159A5B327B9819EB2AF2 /* Pods_DoggoHome.framework */; };
 		BE04C92525109DD60030CA49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C92425109DD60030CA49 /* AppDelegate.swift */; };
 		BE04C92725109DD60030CA49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C92625109DD60030CA49 /* SceneDelegate.swift */; };
 		BE04C92925109DD60030CA49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C92825109DD60030CA49 /* ContentView.swift */; };
@@ -18,13 +19,26 @@
 		BE04C9422511F23E0030CA49 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C9412511F23E0030CA49 /* CardView.swift */; };
 		BE04C9442513A2650030CA49 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C9432513A2650030CA49 /* AddView.swift */; };
 		BE04C9462514E1050030CA49 /* CheckmarkToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C9452514E1050030CA49 /* CheckmarkToggleStyle.swift */; };
+		BE070D1925349A67004F0E8B /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE070D1825349A67004F0E8B /* ProfileSettingsView.swift */; };
+		BE070D1C2535B31F004F0E8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE070D1B2535B31F004F0E8B /* User.swift */; };
+		BE070D1F2535CD5D004F0E8B /* Shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE070D1E2535CD5D004F0E8B /* Shelter.swift */; };
 		BE484CAC2515E2EC0002BE24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE484CAB2515E2EC0002BE24 /* GoogleService-Info.plist */; };
+		BE7C701F252CB8DC00EB77DC /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C701E252CB8DC00EB77DC /* ProfileCardView.swift */; };
+		BE7C7022252E0A0300EB77DC /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C7021252E0A0300EB77DC /* MyColors.swift */; };
 		BEE0D08F251619E700713405 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D08E251619E700713405 /* AddViewModel.swift */; };
 		BEE0D093251747C500713405 /* CustomTapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D092251747C500713405 /* CustomTapBar.swift */; };
 		BEE0D0962518806800713405 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0952518806800713405 /* LoginView.swift */; };
+		BEE0D0D9251915EA00713405 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0D8251915EA00713405 /* RegisterView.swift */; };
+		BEE0D0DC2519163700713405 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0DB2519163700713405 /* ErrorView.swift */; };
+		BEE0D0E025191B3B00713405 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0DF25191B3B00713405 /* ProfileView.swift */; };
+		BEE0D0E5251B644600713405 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0E4251B644600713405 /* ViewRouter.swift */; };
+		BEE0D0E8251B969D00713405 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0E7251B969D00713405 /* UserAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		485C159A5B327B9819EB2AF2 /* Pods_DoggoHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoggoHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EDA9A2E0CCAF38CA07CFCBA /* Pods-DoggoHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggoHome.release.xcconfig"; path = "Target Support Files/Pods-DoggoHome/Pods-DoggoHome.release.xcconfig"; sourceTree = "<group>"; };
+		957C2C3F872E42D581EA2A71 /* Pods-DoggoHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggoHome.debug.xcconfig"; path = "Target Support Files/Pods-DoggoHome/Pods-DoggoHome.debug.xcconfig"; sourceTree = "<group>"; };
 		BE04C92125109DD60030CA49 /* DoggoHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoggoHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE04C92425109DD60030CA49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE04C92625109DD60030CA49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,10 +52,20 @@
 		BE04C9412511F23E0030CA49 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		BE04C9432513A2650030CA49 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		BE04C9452514E1050030CA49 /* CheckmarkToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkToggleStyle.swift; sourceTree = "<group>"; };
+		BE070D1825349A67004F0E8B /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
+		BE070D1B2535B31F004F0E8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BE070D1E2535CD5D004F0E8B /* Shelter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shelter.swift; sourceTree = "<group>"; };
 		BE484CAB2515E2EC0002BE24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE7C701E252CB8DC00EB77DC /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
+		BE7C7021252E0A0300EB77DC /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		BEE0D08E251619E700713405 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		BEE0D092251747C500713405 /* CustomTapBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTapBar.swift; sourceTree = "<group>"; };
 		BEE0D0952518806800713405 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BEE0D0D8251915EA00713405 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		BEE0D0DB2519163700713405 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BEE0D0DF25191B3B00713405 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BEE0D0E4251B644600713405 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		BEE0D0E7251B969D00713405 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060801C3A748ACBA9E7CA80F /* Pods_DoggoHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +83,18 @@
 		772245F2452A5096A72F9D87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				957C2C3F872E42D581EA2A71 /* Pods-DoggoHome.debug.xcconfig */,
+				7EDA9A2E0CCAF38CA07CFCBA /* Pods-DoggoHome.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		826EA7A64D1EDED0ADF2024C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				485C159A5B327B9819EB2AF2 /* Pods_DoggoHome.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BE04C91825109DD60030CA49 = {
@@ -68,6 +103,7 @@
 				BE04C92325109DD60030CA49 /* DoggoHome */,
 				BE04C92225109DD60030CA49 /* Products */,
 				772245F2452A5096A72F9D87 /* Pods */,
+				826EA7A64D1EDED0ADF2024C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +121,7 @@
 				BE04C93C2511EBEB0030CA49 /* Models */,
 				BE04C9392510A2B50030CA49 /* Views */,
 				BEE0D08D251619CE00713405 /* ViewModels */,
+				BEE0D0E2251B499B00713405 /* Helpers */,
 				BE04C92425109DD60030CA49 /* AppDelegate.swift */,
 				BE04C92625109DD60030CA49 /* SceneDelegate.swift */,
 				BE04C92825109DD60030CA49 /* ContentView.swift */,
@@ -111,9 +148,12 @@
 				BE04C93A2510A2C30030CA49 /* HomeView.swift */,
 				BE04C9412511F23E0030CA49 /* CardView.swift */,
 				BE04C9432513A2650030CA49 /* AddView.swift */,
-				BE04C9452514E1050030CA49 /* CheckmarkToggleStyle.swift */,
-				BEE0D092251747C500713405 /* CustomTapBar.swift */,
 				BEE0D0952518806800713405 /* LoginView.swift */,
+				BEE0D0D8251915EA00713405 /* RegisterView.swift */,
+				BEE0D0DB2519163700713405 /* ErrorView.swift */,
+				BEE0D0DF25191B3B00713405 /* ProfileView.swift */,
+				BE7C701E252CB8DC00EB77DC /* ProfileCardView.swift */,
+				BE070D1825349A67004F0E8B /* ProfileSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				BE04C93F2511EC940030CA49 /* Dog.swift */,
+				BE070D1B2535B31F004F0E8B /* User.swift */,
+				BE070D1E2535CD5D004F0E8B /* Shelter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,6 +176,18 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		BEE0D0E2251B499B00713405 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0D092251747C500713405 /* CustomTapBar.swift */,
+				BE04C9452514E1050030CA49 /* CheckmarkToggleStyle.swift */,
+				BEE0D0E4251B644600713405 /* ViewRouter.swift */,
+				BEE0D0E7251B969D00713405 /* UserAuth.swift */,
+				BE7C7021252E0A0300EB77DC /* MyColors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE04C93525109DD70030CA49 /* Build configuration list for PBXNativeTarget "DoggoHome" */;
 			buildPhases = (
+				247C70E97B0DE00FE1316FCC /* [CP] Check Pods Manifest.lock */,
 				BE04C91D25109DD60030CA49 /* Sources */,
 				BE04C91E25109DD60030CA49 /* Frameworks */,
 				BE04C91F25109DD60030CA49 /* Resources */,
+				209783F3696AD44CCDF7E3B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,21 +257,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		209783F3696AD44CCDF7E3B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		247C70E97B0DE00FE1316FCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoggoHome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE04C91D25109DD60030CA49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE0D0E5251B644600713405 /* ViewRouter.swift in Sources */,
+				BE070D1F2535CD5D004F0E8B /* Shelter.swift in Sources */,
+				BE7C7022252E0A0300EB77DC /* MyColors.swift in Sources */,
 				BE04C9442513A2650030CA49 /* AddView.swift in Sources */,
 				BE04C9462514E1050030CA49 /* CheckmarkToggleStyle.swift in Sources */,
+				BE070D1925349A67004F0E8B /* ProfileSettingsView.swift in Sources */,
 				BE04C92525109DD60030CA49 /* AppDelegate.swift in Sources */,
 				BE04C93B2510A2C30030CA49 /* HomeView.swift in Sources */,
 				BE04C92725109DD60030CA49 /* SceneDelegate.swift in Sources */,
+				BE070D1C2535B31F004F0E8B /* User.swift in Sources */,
 				BE04C9402511EC940030CA49 /* Dog.swift in Sources */,
 				BEE0D08F251619E700713405 /* AddViewModel.swift in Sources */,
 				BE04C9422511F23E0030CA49 /* CardView.swift in Sources */,
 				BEE0D0962518806800713405 /* LoginView.swift in Sources */,
+				BEE0D0E8251B969D00713405 /* UserAuth.swift in Sources */,
+				BEE0D0DC2519163700713405 /* ErrorView.swift in Sources */,
+				BEE0D0D9251915EA00713405 /* RegisterView.swift in Sources */,
+				BE7C701F252CB8DC00EB77DC /* ProfileCardView.swift in Sources */,
 				BEE0D093251747C500713405 /* CustomTapBar.swift in Sources */,
+				BEE0D0E025191B3B00713405 /* ProfileView.swift in Sources */,
 				BE04C92925109DD60030CA49 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +460,7 @@
 		};
 		BE04C93625109DD70030CA49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 957C2C3F872E42D581EA2A71 /* Pods-DoggoHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +481,7 @@
 		};
 		BE04C93725109DD70030CA49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EDA9A2E0CCAF38CA07CFCBA /* Pods-DoggoHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -10,14 +10,18 @@ import Foundation
 
 struct Dog: Identifiable {
     
-    var id = UUID()
+    let id = UUID().uuidString
+    var userID: String
     var name: String
     var race: String
     var age: Int
     var gender: String
     var sterile: Bool
     var pictureURL: String
-    var location: String
+    var shelter: Shelter?
+    var address: String?
+    var phoneNumber: String?
+    var description: String?
     var dogFriendly: Bool
     var catFriendly: Bool
     var childFriendly: Bool
@@ -33,24 +37,24 @@ let genders = ["Male", "Femelle"]
 let races = [
      "Inconnue",
      "Affenpinscher",
-     "AiredaleTerrier",
-     "AkitaAmericain",
-     "AkitaInu",
-     "AmericanStaff",
+     "Airedale Terrier",
+     "Akita Americain",
+     "Akita Inu",
+     "American Staff",
      "Barbet",
-     "BarbuTcheque",
+     "Barbu Tcheque",
      "Basenji",
      "Basset",
      "Beagle",
-     "BeardedCollie",
+     "Bearded Collie",
      "Beauceron",
-     "BergerAllemand",
-     "BergerAustralien",
+     "Berger Allemand",
+     "Berger Australien",
      "Groenendael",
-     "BergerBelgeLaekenois",
+     "Berger Belge Laekenois",
      "Malinois",
      "Tervueren",
-     "BergerBlancSuisse",
+     "Berger Blanc Suisse",
      "BergerCatalan",
      "BergerAnatolie",
      "BergerPyrenees",

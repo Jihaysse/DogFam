@@ -7,7 +7,8 @@
 //
 
 import SwiftUI
-//import Firebase
+import Firebase
+import FirebaseFirestore
 
 struct AddView: View {
     
@@ -16,19 +17,49 @@ struct AddView: View {
     @ObservedObject var viewModel: AddViewModel = .sharedInstance
     @Binding var isSheetPresented: Bool
     @State private var isShowingImagePicker = false
-    @State var myImage = UIImage()
-    @State var name: String = ""
-    @State var age: Int = 1
-    @State var selectedRace: Int = 0
-    @State var isMixed: Bool = false
-    @State var selectedGender: Int = 0
-    @State var isSterile: Bool = false
-    @State var isDogFriendly: Bool = false
-    @State var isCatFriendly: Bool = false
-    @State var isChildFriendly: Bool = false
-    @State var needsGarden: Bool = false
-    @State var isClean: Bool = false
+    @State private var myImage = UIImage()
+    @State private var name: String = ""
+    @State private var age: Int = 1
+    @State private var selectedRace: Int = 0
+    @State private var isMixed: Bool = false
+    @State private var selectedGender: Int = 0
+    @State private var isSterile: Bool = false
+    @State private var isDogFriendly: Bool = false
+    @State private var isCatFriendly: Bool = false
+    @State private var isChildFriendly: Bool = false
+    @State private var needsGarden: Bool = false
+    @State private var isClean: Bool = false
+    @State private var shelterName: String = ""
+    @State private var phoneNumber: String = ""
+    var db = Firestore.firestore()
+    let currentUser = Auth.auth().currentUser
+
     
+    //MARK: - Actions
+    
+    private func addDog() {
+        var ref: DocumentReference? = nil
+        ref = db.collection("dogs").addDocument(data: ["userID": currentUser?.uid ?? "",
+                                                    "name": self.name,
+                                                    "race": races[selectedRace],
+                                                    "age": self.age,
+                                                    "gender": genders[selectedGender],
+                                                    "sterile": self.isSterile,
+                                                    "pictureURL": "",
+                                                    "location": self.shelterName,
+                                                    "phoneNumber": self.phoneNumber,
+                                                    "dogFriendly": self.isDogFriendly,
+                                                    "catFriendly": self.isCatFriendly,
+                                                    "childFriendly": self.isChildFriendly,
+                                                    "needsGarden": self.needsGarden,
+                                                    "isClean": self.isClean]) { error in
+            if let err = error {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID : \(ref!.documentID)")
+            }
+        }
+    }
     
     //MARK: - View
     
@@ -97,6 +128,14 @@ struct AddView: View {
                         Toggle("Entente avec les enfants", isOn: $isChildFriendly).toggleStyle(CheckmarkToggleStyle())
                         Toggle("Besoin d'un jardin", isOn: $needsGarden).toggleStyle(CheckmarkToggleStyle())
                         }
+                
+                Section(header: Text("Contact")
+                            .bold()
+                        .font(.headline)
+                        ) {
+                    TextField("Nom du refuge", text: $shelterName)
+                    TextField("Numéro de téléphone", text: $phoneNumber)
+                }
 
                 
 
@@ -105,7 +144,9 @@ struct AddView: View {
                 //                .navigationBarHidden(true)
                 .navigationBarItems(trailing:
                     Button("Publier") {
-                        viewModel.dogs.append(Dog(name: self.name, race: races[selectedRace], age: self.age, gender: genders[selectedGender], sterile: self.isSterile, pictureURL: "", location: "", dogFriendly: self.isDogFriendly, catFriendly: self.isCatFriendly, childFriendly: self.isChildFriendly, needsGarden: self.needsGarden, isClean: self.isClean))
+//                        viewModel.dogs.append(Dog(name: self.name, race: races[selectedRace], age: self.age, gender: genders[selectedGender], sterile: self.isSterile, pictureURL: "", location: self.shelterName, phoneNumber: self.phoneNumber, dogFriendly: self.isDogFriendly, catFriendly: self.isCatFriendly, childFriendly: self.isChildFriendly, needsGarden: self.needsGarden, isClean: self.isClean))
+                        addDog()
+//                        viewModel.getDogData()
                         self.isSheetPresented.toggle()
                 })
             
