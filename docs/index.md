@@ -40,8 +40,8 @@ The user who is looking for a dog can filter the search according his/her/. need
 
 ## Showcase
 <p float="left">
-  <img src="Screenshots/HomeView.png" width="30%">
-  <img src="blob/master/Screenshots/ProfileView.png" width="30%">
+  <img src="./Screenshots/HomeView.png" width="15%">
+  <img src="./Screenshots/ProfileView.png" width="15%">
   <img src="https://github.com/Jihaysse/DogFam/blob/master/Screenshots/AddView.png" width="30%">
  </p>
  <p float="left">
