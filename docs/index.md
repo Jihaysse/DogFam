@@ -40,7 +40,9 @@ The user who is looking for a dog can filter the search according his/her/. need
 
 ## Showcase
 ### Home View
-<img src="/Screenshots/HomeView.png" width="300">
+![Home View](/Screenshots/HomeView.png)
+
+<img src="./Screenshots/HomeView.png" width="300">
 
 ### Profile View
 <img src="/Screenshots/ProfileView.png" width="300">
