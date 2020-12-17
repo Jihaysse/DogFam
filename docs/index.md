@@ -45,7 +45,7 @@ The user who is looking for a dog can filter the search according his/her/. need
 <img src="./Screenshots/HomeView.png" width="300">
 
 ### Profile View
-<img src="/Screenshots/ProfileView.png" width="300">
+<img src="DogFam/Screenshots/ProfileView.png" width="300">
 
 ### Add View
 <img src="/Screenshots/AddView.png" width="300">
