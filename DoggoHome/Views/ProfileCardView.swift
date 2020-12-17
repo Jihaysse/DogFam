@@ -7,23 +7,31 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProfileCardView: View {
     
     //MARK: - Properties
     
     var dog: Dog
+    let colors = MyColors()
     
     //MARK: - View
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: .init(colors: [.init(red: 0.2, green: 0.7, blue: 1), .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .cornerRadius(15)
-                .shadow(radius: 10)
+            if dog.gender == "Male" {
+                colors.gradientBlue
+                    .cornerRadius(15)
+                    .shadow(radius: 10)
+            } else {
+                colors.gradientPink
+                    .cornerRadius(15)
+                    .shadow(radius: 10)
+            }
             VStack {
                 HStack(spacing: 0) {
-                    Image("bergerallemand")
+                    WebImage(url: URL(string: dog.pictureURL))
                         .resizable()
                         .clipShape(Circle())
                         .shadow(radius: 10)
@@ -69,8 +77,8 @@ struct ProfileCardView: View {
     }
 }
 
-struct ProfileCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileCardView(dog: Dog(userID: "", name: "Pepere", race: "Bouledogue Francais", age: 5, gender: "Male", sterile: true, pictureURL: "", shelter: nil, address: "", phoneNumber: "", dogFriendly: true, catFriendly: true, childFriendly: true, needsGarden: true, isClean: true))
-    }
-}
+//struct ProfileCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProfileCardView(dog: Dog(userID: "", name: "Pepere", race: "Bouledogue Francais", age: 5, gender: "Male", sterile: true, pictureURL: "", shelter: nil, address: "", phoneNumber: "", dogFriendly: true, catFriendly: true, childFriendly: true, needsGarden: true, isClean: true))
+//    }
+//}

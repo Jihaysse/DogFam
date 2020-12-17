@@ -34,7 +34,8 @@ struct ErrorView: View {
                 Text(self.error == "RESET" ? "Un email contenant un lien de réinitialisation de votre mot de passe vous a été envoyé" : self.error)
                     .foregroundColor(self.color)
                     .padding(.top)
-                    .padding(.horizontal, 25)
+                    .padding(.horizontal, 20)
+                    .font(.system(size: 20))
                 
                 Button(action: {
                     
@@ -56,6 +57,8 @@ struct ErrorView: View {
             .frame(width: UIScreen.main.bounds.width - 70)
             .background(Color.white)
             .cornerRadius(15)
+            .offset(x: UIScreen.main.bounds.width / 12, y: UIScreen.main.bounds.height / 4)
+
         }
         .background(Color.black.opacity(0.35).edgesIgnoringSafeArea(.all))
     }

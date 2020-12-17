@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		060801C3A748ACBA9E7CA80F /* Pods_DoggoHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485C159A5B327B9819EB2AF2 /* Pods_DoggoHome.framework */; };
 		BE04C92525109DD60030CA49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C92425109DD60030CA49 /* AppDelegate.swift */; };
 		BE04C92725109DD60030CA49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C92625109DD60030CA49 /* SceneDelegate.swift */; };
 		BE04C92925109DD60030CA49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04C92825109DD60030CA49 /* ContentView.swift */; };
@@ -22,7 +21,9 @@
 		BE070D1925349A67004F0E8B /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE070D1825349A67004F0E8B /* ProfileSettingsView.swift */; };
 		BE070D1C2535B31F004F0E8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE070D1B2535B31F004F0E8B /* User.swift */; };
 		BE070D1F2535CD5D004F0E8B /* Shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE070D1E2535CD5D004F0E8B /* Shelter.swift */; };
+		BE20B223254C6FBB002F9A44 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20B222254C6FBB002F9A44 /* ImageStorage.swift */; };
 		BE484CAC2515E2EC0002BE24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE484CAB2515E2EC0002BE24 /* GoogleService-Info.plist */; };
+		BE70659A255C57B100808140 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE706599255C57B100808140 /* ProfileViewModel.swift */; };
 		BE7C701F252CB8DC00EB77DC /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C701E252CB8DC00EB77DC /* ProfileCardView.swift */; };
 		BE7C7022252E0A0300EB77DC /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C7021252E0A0300EB77DC /* MyColors.swift */; };
 		BEE0D08F251619E700713405 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D08E251619E700713405 /* AddViewModel.swift */; };
@@ -33,12 +34,12 @@
 		BEE0D0E025191B3B00713405 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0DF25191B3B00713405 /* ProfileView.swift */; };
 		BEE0D0E5251B644600713405 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0E4251B644600713405 /* ViewRouter.swift */; };
 		BEE0D0E8251B969D00713405 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0D0E7251B969D00713405 /* UserAuth.swift */; };
+		FDEA50B75E24357C265BB7C6 /* Pods_DoggoHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9490A9EB9C7C4E94295095 /* Pods_DoggoHome.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		485C159A5B327B9819EB2AF2 /* Pods_DoggoHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoggoHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EDA9A2E0CCAF38CA07CFCBA /* Pods-DoggoHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggoHome.release.xcconfig"; path = "Target Support Files/Pods-DoggoHome/Pods-DoggoHome.release.xcconfig"; sourceTree = "<group>"; };
-		957C2C3F872E42D581EA2A71 /* Pods-DoggoHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggoHome.debug.xcconfig"; path = "Target Support Files/Pods-DoggoHome/Pods-DoggoHome.debug.xcconfig"; sourceTree = "<group>"; };
+		1F9490A9EB9C7C4E94295095 /* Pods_DoggoHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoggoHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BDAFF371EB708ECC9999996 /* Pods-DoggoHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggoHome.release.xcconfig"; path = "Target Support Files/Pods-DoggoHome/Pods-DoggoHome.release.xcconfig"; sourceTree = "<group>"; };
 		BE04C92125109DD60030CA49 /* DoggoHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoggoHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE04C92425109DD60030CA49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE04C92625109DD60030CA49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +56,9 @@
 		BE070D1825349A67004F0E8B /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
 		BE070D1B2535B31F004F0E8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE070D1E2535CD5D004F0E8B /* Shelter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shelter.swift; sourceTree = "<group>"; };
+		BE20B222254C6FBB002F9A44 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		BE484CAB2515E2EC0002BE24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE706599255C57B100808140 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		BE7C701E252CB8DC00EB77DC /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		BE7C7021252E0A0300EB77DC /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		BEE0D08E251619E700713405 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		BEE0D0DF25191B3B00713405 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BEE0D0E4251B644600713405 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		BEE0D0E7251B969D00713405 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		FE63D46E645ACF5120C52C95 /* Pods-DoggoHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggoHome.debug.xcconfig"; path = "Target Support Files/Pods-DoggoHome/Pods-DoggoHome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,37 +77,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060801C3A748ACBA9E7CA80F /* Pods_DoggoHome.framework in Frameworks */,
+				FDEA50B75E24357C265BB7C6 /* Pods_DoggoHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A09E6155EBFD8D2CF388AE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F9490A9EB9C7C4E94295095 /* Pods_DoggoHome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		772245F2452A5096A72F9D87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				957C2C3F872E42D581EA2A71 /* Pods-DoggoHome.debug.xcconfig */,
-				7EDA9A2E0CCAF38CA07CFCBA /* Pods-DoggoHome.release.xcconfig */,
+				FE63D46E645ACF5120C52C95 /* Pods-DoggoHome.debug.xcconfig */,
+				6BDAFF371EB708ECC9999996 /* Pods-DoggoHome.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		826EA7A64D1EDED0ADF2024C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				485C159A5B327B9819EB2AF2 /* Pods_DoggoHome.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BE04C91825109DD60030CA49 = {
 			isa = PBXGroup;
 			children = (
+				BE15505D258BB4D800BBC43D /* Screenshots */,
 				BE04C92325109DD60030CA49 /* DoggoHome */,
 				BE04C92225109DD60030CA49 /* Products */,
 				772245F2452A5096A72F9D87 /* Pods */,
-				826EA7A64D1EDED0ADF2024C /* Frameworks */,
+				6A09E6155EBFD8D2CF388AE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,10 +173,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BE15505D258BB4D800BBC43D /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		BEE0D08D251619CE00713405 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				BEE0D08E251619E700713405 /* AddViewModel.swift */,
+				BE20B222254C6FBB002F9A44 /* ImageStorage.swift */,
+				BE706599255C57B100808140 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -195,11 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE04C93525109DD70030CA49 /* Build configuration list for PBXNativeTarget "DoggoHome" */;
 			buildPhases = (
-				247C70E97B0DE00FE1316FCC /* [CP] Check Pods Manifest.lock */,
+				345D5E873C326E3E6853B31B /* [CP] Check Pods Manifest.lock */,
 				BE04C91D25109DD60030CA49 /* Sources */,
 				BE04C91E25109DD60030CA49 /* Frameworks */,
 				BE04C91F25109DD60030CA49 /* Resources */,
-				209783F3696AD44CCDF7E3B7 /* [CP] Embed Pods Frameworks */,
+				4E9991A97AEA82293301325B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,24 +272,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		209783F3696AD44CCDF7E3B7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		247C70E97B0DE00FE1316FCC /* [CP] Check Pods Manifest.lock */ = {
+		345D5E873C326E3E6853B31B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,6 +292,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E9991A97AEA82293301325B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoggoHome/Pods-DoggoHome-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -319,6 +333,8 @@
 				BE04C9422511F23E0030CA49 /* CardView.swift in Sources */,
 				BEE0D0962518806800713405 /* LoginView.swift in Sources */,
 				BEE0D0E8251B969D00713405 /* UserAuth.swift in Sources */,
+				BE70659A255C57B100808140 /* ProfileViewModel.swift in Sources */,
+				BE20B223254C6FBB002F9A44 /* ImageStorage.swift in Sources */,
 				BEE0D0DC2519163700713405 /* ErrorView.swift in Sources */,
 				BEE0D0D9251915EA00713405 /* RegisterView.swift in Sources */,
 				BE7C701F252CB8DC00EB77DC /* ProfileCardView.swift in Sources */,
@@ -381,7 +397,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -398,6 +414,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -441,7 +458,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -452,6 +469,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -460,9 +478,10 @@
 		};
 		BE04C93625109DD70030CA49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 957C2C3F872E42D581EA2A71 /* Pods-DoggoHome.debug.xcconfig */;
+			baseConfigurationReference = FE63D46E645ACF5120C52C95 /* Pods-DoggoHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DoggoHome/Preview Content\"";
 				DEVELOPMENT_TEAM = 24JFNMT5M2;
@@ -472,8 +491,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliensegers.DoggoHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,9 +502,10 @@
 		};
 		BE04C93725109DD70030CA49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EDA9A2E0CCAF38CA07CFCBA /* Pods-DoggoHome.release.xcconfig */;
+			baseConfigurationReference = 6BDAFF371EB708ECC9999996 /* Pods-DoggoHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DoggoHome/Preview Content\"";
 				DEVELOPMENT_TEAM = 24JFNMT5M2;
@@ -493,8 +515,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliensegers.DoggoHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

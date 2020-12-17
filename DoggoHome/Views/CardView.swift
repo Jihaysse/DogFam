@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CardView: View {
     
@@ -32,7 +33,7 @@ struct CardView: View {
             VStack {
                 Spacer()
                 HStack(spacing: 10) {
-                    Image("bergerallemand")
+                    WebImage(url: URL(string: dog.pictureURL))
                         .resizable()
                         .clipShape(Circle())
                         .shadow(radius: 10)
@@ -98,13 +99,13 @@ struct CardView: View {
     
 }
 
-#if DEBUG
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(dog: Dog(userID: "", name: "Asuna", race: "Akita Americain", age: 2, gender: "Femelle", sterile: true, pictureURL: "", shelter: nil, address: "", phoneNumber: "", dogFriendly: true, catFriendly: false, childFriendly: true, needsGarden: true, isClean: true))
-    }
-}
-#endif
+//#if DEBUG
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardView(dog: Dog(userID: "", name: "Asuna", race: "Akita Americain", age: 2, gender: "Femelle", sterile: true, pictureURL: "", shelter: nil, address: "", phoneNumber: "", dogFriendly: true, catFriendly: false, childFriendly: true, needsGarden: true, isClean: true))
+//    }
+//}
+//#endif
 
 //MARK: - Struct: InfoText
 

@@ -19,6 +19,10 @@ struct HomeView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack { // VStack so the CardView's shadow isn't cut off
+                    if addViewModel.dogs.isEmpty {
+                        Text("Pas de chiens à adopter!")
+                        // TO DO: Ajouter une image stylée démontrant qu'il n'y a pas de chiens à adopter pour le moment.
+                    }
                     ForEach(addViewModel.dogs) { dog in
                         CardView(dog: dog)
                     }

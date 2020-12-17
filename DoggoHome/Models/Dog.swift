@@ -10,7 +10,7 @@ import Foundation
 
 struct Dog: Identifiable {
     
-    let id = UUID().uuidString
+    let id: String
     var userID: String
     var name: String
     var race: String
@@ -52,32 +52,32 @@ let races = [
      "Berger Australien",
      "Groenendael",
      "Berger Belge Laekenois",
-     "Malinois",
-     "Tervueren",
+     "Berger Malinois",
+     "Berger Tervueren",
      "Berger Blanc Suisse",
-     "BergerCatalan",
-     "BergerAnatolie",
-     "BergerPyrenees",
-     "BergerShetland",
-     "BergerCaucase",
-     "BergerHollandais",
-     "BergerYougoslave",
+     "Berger Catalan",
+     "Berger Anatolie",
+     "Berger Pyrenees",
+     "Berger Shetland",
+     "Berger Caucase",
+     "Berger Hollandais",
+     "Berger Yougoslave",
      "Bichon",
      "Yorkshire",
      "Bobtail",
      "Boerbull",
-     "BorderCollie",
-     "BostonTerrier",
-     "BouledogueAmericain",
-     "BouledogueFrancais",
-     "BouvierAustralien",
-     "BouvierBernois",
-     "BouvierFlandres",
+     "Border Collie",
+     "Boston Terrier",
+     "Bouledogue Americain",
+    "Bouledogue Anglais",
+     "Bouledogue Francais",
+     "Bouvier Australien",
+     "Bouvier Bernois",
+     "Bouvier Flandres",
      "Boxer",
-     "BraqueAllemand",
-     "BraqueWeimar",
-     "BraqueHongrois",
-     "BullTerrier",
-     "BouledogueAnglais",
-     "BullMastiff"
+     "Braque Allemand",
+     "Braque Weimar",
+     "Braque Hongrois",
+    "Bull Mastiff",
+     "Bull Terrier"
 ]

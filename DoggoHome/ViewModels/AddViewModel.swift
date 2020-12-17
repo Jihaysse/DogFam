@@ -21,31 +21,7 @@ class AddViewModel: ObservableObject {
     
     //MARK: - Actions
     
-//    func getDogData() {
-//        db.collection("dogs").getDocuments() { (snapshot, error) in
-//            if let err = error {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in snapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                    let dog = Dog(name: document.get("name") as! String,
-//                                  race: document.get("race") as! String,
-//                                  age: document.get("age") as! Int,
-//                                  gender: document.get("gender") as! String,
-//                                  sterile: document.get("sterile") as! Int == 1 ? true : false,
-//                                  pictureURL: document.get("pictureURL") as! String,
-//                                  location: document.get("location") as! String,
-//                                  phoneNumber: document.get("phoneNumber") as! String,
-//                                  dogFriendly: document.get("dogFriendly") as! Int == 1 ? true : false,
-//                                  catFriendly: document.get("catFriendly") as! Int == 1 ? true : false,
-//                                  childFriendly: document.get("childFriendly") as! Int == 1 ? true : false,
-//                                  needsGarden: document.get("needsGarden") as! Int == 1 ? true : false,
-//                                  isClean: document.get("isClean") as! Int == 1 ? true : false)
-//                    self.dogs.append(dog)
-//                }
-//            }
-//        }
-//    }
+
     
     func fetchDogData() {
         db.collection("dogs").addSnapshotListener { (querySnapshot, error) in
@@ -57,6 +33,7 @@ class AddViewModel: ObservableObject {
             self.dogs = documents.map({ (queryDocumentSnapshot) -> Dog in
                 let data = queryDocumentSnapshot.data()
                 let userID = data["userID"] as? String ?? ""
+                let dogID = data["dogID"] as? String ?? ""
                 let name = data["name"] as? String ?? ""
                 let race = data["race"] as? String ?? ""
                 let age = data["age"] as? Int ?? 1
@@ -72,15 +49,26 @@ class AddViewModel: ObservableObject {
                 let needsGarden = data["needsGarden"] as! Int == 1 ? true : false
                 let isClean = data["isClean"] as! Int == 1 ? true : false
                 
-                return Dog(userID: userID, name: name, race: race, age: age, gender: gender, sterile: sterile, pictureURL: pictureURL, shelter: shelter, address: address, phoneNumber: phoneNumber, dogFriendly: dogFriendly, catFriendly: catFriendly, childFriendly: childFriendly, needsGarden: needsGarden, isClean: isClean)
+                return Dog(id: dogID, userID: userID, name: name, race: race, age: age, gender: gender, sterile: sterile, pictureURL: pictureURL, shelter: shelter, address: address, phoneNumber: phoneNumber, dogFriendly: dogFriendly, catFriendly: catFriendly, childFriendly: childFriendly, needsGarden: needsGarden, isClean: isClean)
             })
         }
-        
-        
-        
     }
     
     
+    func removeDog(at index: Int) {
+        self.dogs.remove(at: index)
+    }
+    
+    
+    func removeDogFromFirestore(dogID: String) {
+        db.collection("dogs").document(dogID).delete() { err in
+            if let err = err {
+                print("Error deleting dog in Firestore: \(err)")
+            } else {
+                print("Dog successfully removed from Firestore!")
+            }
+        }
+    }
     
     
     

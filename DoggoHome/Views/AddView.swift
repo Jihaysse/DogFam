@@ -17,7 +17,8 @@ struct AddView: View {
     @ObservedObject var viewModel: AddViewModel = .sharedInstance
     @Binding var isSheetPresented: Bool
     @State private var isShowingImagePicker = false
-    @State private var myImage = UIImage()
+    @State private var myImage: UIImage = UIImage(named: "no-profile-photo")!
+    @State private var pictureURL: String = ""
     @State private var name: String = ""
     @State private var age: Int = 1
     @State private var selectedRace: Int = 0
@@ -31,21 +32,25 @@ struct AddView: View {
     @State private var isClean: Bool = false
     @State private var shelterName: String = ""
     @State private var phoneNumber: String = ""
+    @State private var country: String = ""
+    @State private var area: String = ""
+    var dogID = UUID().uuidString
     var db = Firestore.firestore()
     let currentUser = Auth.auth().currentUser
+    let imageStorage = ImageStorage()
 
     
     //MARK: - Actions
     
-    private func addDog() {
-        var ref: DocumentReference? = nil
-        ref = db.collection("dogs").addDocument(data: ["userID": currentUser?.uid ?? "",
+    private func uploadDogToFirestore() {
+        db.collection("dogs").document(dogID).setData(["userID": currentUser?.uid ?? "",
+                                                       "dogID": dogID,
                                                     "name": self.name,
                                                     "race": races[selectedRace],
                                                     "age": self.age,
                                                     "gender": genders[selectedGender],
                                                     "sterile": self.isSterile,
-                                                    "pictureURL": "",
+                                                    "pictureURL": self.pictureURL,
                                                     "location": self.shelterName,
                                                     "phoneNumber": self.phoneNumber,
                                                     "dogFriendly": self.isDogFriendly,
@@ -56,7 +61,33 @@ struct AddView: View {
             if let err = error {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID : \(ref!.documentID)")
+                print("Dog added")
+            }
+        }
+    }
+    
+    
+    private func addDogToUserProfile() {
+        if let currUserUID = currentUser?.uid {
+            db.collection("profiles").document(currUserUID).setData(["dogs uploaded": true], merge: true) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document succesfully written")
+            }
+        }
+
+        }
+    }
+    
+    
+    private func publishDog() {
+        if let currUserUID = currentUser?.uid {
+            imageStorage.uploadDogImageToFirestore(dogID: dogID, image: myImage) {
+                imageStorage.downloadDogImageFromFirestore(dogID: dogID) { url in
+                    self.pictureURL = url
+                    self.uploadDogToFirestore()
+                }
             }
         }
     }
@@ -73,11 +104,11 @@ struct AddView: View {
                         Spacer()
                         Image(uiImage: myImage)
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
                             .clipShape(Circle())
-                            .frame(width: 200, height: 200)
-                            .shadow(radius: 3)
-                            .overlay(Circle().stroke(Color.black, lineWidth: 2))
+                            .shadow(radius: 5)
+                            .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 180, height: 180)
                         Spacer()
                     }
                     Button(action: {
@@ -88,7 +119,7 @@ struct AddView: View {
                     }).sheet(isPresented: $isShowingImagePicker, content: {
                         ImagePickerView(isPresented: self.$isShowingImagePicker, selectedImage: self.$myImage)
                     })
-                }
+                }.listRowBackground(Color(UIColor.systemGroupedBackground))
                 
                 Section(header: Text("Informations")
                     .bold()
@@ -136,17 +167,41 @@ struct AddView: View {
                     TextField("Nom du refuge", text: $shelterName)
                     TextField("Numéro de téléphone", text: $phoneNumber)
                 }
+                
+                Button(action: {
+                    self.publishDog()
+                    self.isSheetPresented.toggle()
+                }, label: {
+                    HStack(spacing: 15) {
+                        Spacer()
+                        Text("Publier")
+                            .fontWeight(.semibold)
+                        Image(systemName: "paperplane")
+                        Spacer()
+                        
+                    }.padding(17)
+                    .font(.system(size: 20))
+                    .background(Color.white)
+                    .cornerRadius(25)
+                    .foregroundColor(Color.init(red: 0.9, green: 0.4, blue: 0.4))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.init(red: 0.9, green: 0.4, blue: 0.4))
+                    )
+                    .frame(width: 320)
+                }
+                ).listRowBackground(Color(UIColor.systemGroupedBackground))
+                .padding(.bottom, 48)
 
                 
 
-            }
+            }.background(Color.red)
             .navigationBarTitle("Ajouter un chien")
                 //                .navigationBarHidden(true)
                 .navigationBarItems(trailing:
                     Button("Publier") {
-//                        viewModel.dogs.append(Dog(name: self.name, race: races[selectedRace], age: self.age, gender: genders[selectedGender], sterile: self.isSterile, pictureURL: "", location: self.shelterName, phoneNumber: self.phoneNumber, dogFriendly: self.isDogFriendly, catFriendly: self.isCatFriendly, childFriendly: self.isChildFriendly, needsGarden: self.needsGarden, isClean: self.isClean))
-                        addDog()
-//                        viewModel.getDogData()
+                        uploadDogToFirestore()
+                        addDogToUserProfile()
                         self.isSheetPresented.toggle()
                 })
             

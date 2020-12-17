@@ -13,8 +13,6 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-    let db = Firestore.firestore()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         return true
