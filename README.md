@@ -39,21 +39,16 @@ The user who is looking for a dog can filter the search according his/her/. need
 * Reputation gain
 
 ## Showcase
-### Home View
-<img src="/Screenshots/HomeView.png" width="300">
-
-### Profile View
-<img src="/Screenshots/ProfileView.png" width="300">
-
-### Add View
-<img src="/Screenshots/AddView.png" width="300">
-<img src="/Screenshots/AddView2.png" width="300">
-
-### Login View
-<img src="/Screenshots/LoginView.png" width="300">
-
-### Register View
-<img src="/Screenshots/RegisterView.png" width="300">
+<p float="left">
+  <img src="/Screenshots/HomeView.png" width="30%">
+  <img src="/Screenshots/ProfileView.png" width="30%">
+  <img src="/Screenshots/AddView.png" width="30%">
+ </p>
+ <p float="left">
+  <img src="/Screenshots/AddView2.png" width="30%">
+  <img src="/Screenshots/LoginView.png" width="30%">
+  <img src="/Screenshots/RegisterView.png" width="30%">
+</p>
 
 
 
