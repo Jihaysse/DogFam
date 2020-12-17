@@ -1,37 +1,61 @@
-## Welcome to GitHub Pages
+# DogFam 🐶🏠
 
-You can use the [editor on GitHub](https://github.com/Jihaysse/DogFam/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+An iOS app made using Swift, SwiftUI & Firebase (Cloud Firestore).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## The problem
 
-### Markdown
+When I was looking to adopt a dog from a shelter, I ran into a main issue: I didn't know where to search.  
+I already have 2 dogs so it was even harder to find a dog which will get on well with them.  
+I started looking on several shelters' websites but they were barely up to date.  
+Moreover, there was no way to filter the dogs (as I could only rescue a female which accepts other dogs & children).  
+Same for Facebook groups (which are more up to date).  
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## The solution
 
-```markdown
-Syntax highlighted code block
+I created DogFam (previously DoggoHome) to make such searches easier.  
+DogFam let everyone (as long as they're registered) add a dog which is available for adoption & specify his/her characteristics.  
+You don't need to be a registered shelter to add a dog as - usually on Facebook groups - it's mainly kept up to date thanks to volunteers.  
+The dog is then listed on the main screen's list.  
+The user who is looking for a dog can filter the search according his/her/. needs.  
 
-# Header 1
-## Header 2
-### Header 3
+## Features
 
-- Bulleted
-- List
+* Add a dog (stored in Firestore)
+* Delete a dog (stored in Firestore)
+* Upload pictures (stored in Firestore)
+* Create an account (email & password)
+* Profile View (with the dogs you uploaded)
+* Home View (with all the dogs available)
+* Dog Card View
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## To-Do list
 
-[Link](url) and ![Image](src)
-```
+* REFACTORING & clean code (still learning MVVM)
+* Search functionality (Home View)
+* Touch Dog Card View functionality
+* Overall UI
+* Add View UI
+* Reputation gain
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Showcase
+### Home View
+<img src="/Screenshots/HomeView.png" width="300">
 
-### Jekyll Themes
+### Profile View
+<img src="/Screenshots/ProfileView.png" width="300">
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Jihaysse/DogFam/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Add View
+<img src="/Screenshots/AddView.png" width="300">
+<img src="/Screenshots/AddView2.png" width="300">
 
-### Support or Contact
+### Login View
+<img src="/Screenshots/LoginView.png" width="300">
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Register View
+<img src="/Screenshots/RegisterView.png" width="300">
+
+
+
+
+
